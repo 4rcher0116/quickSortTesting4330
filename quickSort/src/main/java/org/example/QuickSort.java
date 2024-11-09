@@ -5,7 +5,12 @@ package org.example;
 public class QuickSort {
     // QuickSort method that returns a sorted array
     public static int[] quickSort(int[] arr) {
-        if (arr == null || arr.length == 0) {
+        if (arr == null) {
+            throw new NullPointerException("Input array cannot be null");
+        }
+        
+        
+        if (arr.length == 0) {
             return arr; // Handle edge cases
         }
         // Clone the input array to avoid modifying the original array
